@@ -126,6 +126,11 @@ app.get('/employment', function(req, res) {
     });
 });
 
+// For d3 Visualization Bar Chart Sampling
+app.get('/d3visualization', function (req, res) {
+    res.render('visualizationD3');
+});
+
 
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
