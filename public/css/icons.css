@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	font-style: normal;
+}
+
+.cd-dropdown span[class^="icon-"]:before, 
+.cd-dropdown span[class*=" icon-"]:before {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	position: absolute;
+	font-size: 30px;
+	line-height: 30px;
+	width: 50px;
+	top: 50%;
+	left: 15px;
+	margin-top: -15px;
+	text-align: center;
+}
+
+.icon-poverty:before {
+	font-family: FontAwesome;
+	content: "\f155";
+}
+.icon-marriage:before {
+	content: "\f004";
+}
+.icon-suicide:before {
+	content: "\f119";
+}
+.icon-smoking:before {
+	content: "\f06d";
+}
+.icon-housing:before {
+	content: "\f015";
+}
+.icon-education:before {
+	content: "\f19d";
+}
