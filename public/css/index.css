@@ -145,16 +145,24 @@ body {
 
 #map_section {
     position: fixed;
-    width: 50%;
+    width: 70%;
     float: left;
     overflow: scroll;
     height: 100%;
 }
 
 #sidebar {
-    width: 40%;
+    width: 35%;
     height: 100%;
     float: right;
+}
+
+.info{
+    margin-left: 60px;
+}
+
+.info h3{
+    margin-left: 35px;
 }
 
 /*Dropdown menu*/
