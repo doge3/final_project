@@ -145,24 +145,16 @@ body {
 
 #map_section {
     position: fixed;
-    width: 70%;
+    width: 60%;
     float: left;
     overflow: scroll;
     height: 100%;
 }
 
 #sidebar {
-    width: 35%;
+    width: 40%;
     height: 100%;
     float: right;
-}
-
-.info{
-    margin-left: 60px;
-}
-
-.info h3{
-    margin-left: 35px;
 }
 
 /*Dropdown menu*/
@@ -237,4 +229,9 @@ body {
 .cd-active.cd-dropdown ul li span:hover {
     background: #f8b161;
     color: #fff;
+}
+
+.piechart {
+    margin-bottom: 30px;
+    text-align: center;
 }

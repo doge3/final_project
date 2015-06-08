@@ -11,14 +11,7 @@ var squel = require('squel');
 var app = express();
 
 dotenv.load();
-
-var DELPHI_HOST = process.env.DELPHI_HOST;
-var DELPHI_PORT = process.env.DELPHI_PORT;
-var DELPHI_USERNAME = process.env.DELPHI_USERNAME;
-var DELPHI_PASSWORD = process.env.DELPHI_PASSWORD;
-var DELPHI_DB = process.env.DELPHI_DB;
-
-var connStr = 'pg://' + DELPHI_USERNAME + ':' + encodeURIComponent(DELPHI_PASSWORD) + '@' + DELPHI_HOST + ':' + DELPHI_PORT + '/' + DELPHI_DB;
+var connStr = process.env.DELPHI_URL;
 
 app.set('port', process.env.PORT || 3000);
 
@@ -38,17 +31,6 @@ app.get('/education', function(req, res) {
 
     //This function call connects you to the database.
     pg.connect(connStr, function(err, client, done) {
-        var handleError = function(err) {
-            if (!err) return false;
-
-            done(client);
-            res.writeHead(500, {
-                'content-type': 'text/plain'
-            });
-            res.end('An error occurred');
-            return true;
-        }
-
         //Create your query string using SquelJS
         var queryStr = squel.select()
             .field("*")
@@ -92,7 +74,8 @@ app.get('/poverty', function(req, res) {
     pg.connect(connStr, function(err, client, done) {
         var queryStr = squel.select()
             .field("*")
-            .from(sql.poverty).toString();
+            .from(sql.poverty)
+            .where("\"Region\" IS NOT NULL").toString();
         var query = client.query(queryStr);
 
         query.on('row', function(row, result) {

@@ -15,11 +15,13 @@
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
       <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
       <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link href="css/c3.min.css" rel="stylesheet" type="text/css">
       <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-      
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
       <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
-      
+      <script src="js/d3.min.js" charset="utf-8"></script>
+      <script src="js/c3.min.js"></script>
       {{{_sections.head}}}
 </head>
 
@@ -40,28 +42,12 @@
 
     {{{body}}}    
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+    <script type="text/javascript" src="js/c3visualization.js"></script>
     <script type="text/javascript">
-      
       $( function() {
-        
-        $( '#cd-dropdown' ).dropdown();
-
+        $( '#cd-dropdown').dropdown();
       });
-
-    </script>
-    
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.dropdown.js"></script>
-    <script type="text/javascript">
-      
-      $( function() {
-        
-        $( '#cd-dropdown' ).dropdown();
-
-      });
-
     </script>
     
     {{{_sections.bodyscripts}}}
