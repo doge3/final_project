@@ -28,7 +28,7 @@ $(function() {
             }
         });
 
-        addPie('Pendleton', $('.cd-dropdown input').val(), true);
+        addPie('Pendleton', $('#cd-dropdown').val(), true);
 
         $('#map_img').mapster({
             fillColor: 'ff0000',
@@ -52,7 +52,7 @@ $(function() {
 
         function clickHandler(e) {
             if (e.selected) {
-                var category = $('.cd-dropdown input').val();
+                var category = $('#cd-dropdown').val();
                 updateBar(e.key, category, true);
                 addPie(e.key, category, true);
             } else {
