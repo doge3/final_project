@@ -56,14 +56,16 @@
       $("map#sdMap").click(function(ev){
         var target = $(ev.target);
         var targetId = target.attr('id');
-        if(targetId == 'coronado') {
+        $('.display').hide();
+        $("#" + targetId + "Title").show();
+        /*if(targetId == 'coronado') {
           $('.display').hide();
           $("#coronadoTitle").show();
         }
         else if(targetId == 'oceanside'){
           $('.display').hide();
           $("#oceansideTitle").show();
-        }
+        }*/
       });
 
     </script>
