@@ -235,3 +235,30 @@ body {
     margin-bottom: 30px;
     text-align: center;
 }
+
+
+
+/*About */
+.about{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.about p{
+    width: 1250px;
+    font-size: 16px;
+}
+
+.blurb img{
+    float: left;
+    margin-right: 25px;
+}
+
+
+/* Contact */
+.contact{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
