@@ -170,15 +170,18 @@ body {
 }
 
 #map_section {
-    position: fixed;
     float: left;
-    overflow: auto;
     width: 60%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: fixed;
 }
 
 #sidebar {
     width: 40%;
     float: right;
+    height: 100%;
 }
 
 /*Dropdown menu */
