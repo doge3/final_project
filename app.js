@@ -8,6 +8,7 @@ var http = require('http');
 var path = require('path');
 var sql = require('./sql');
 var squel = require('squel');
+var favicon = require('serve-favicon');
 var app = express();
 
 dotenv.load();
@@ -18,6 +19,7 @@ app.set('port', process.env.PORT || 3000);
 app.engine('handlebars', handlebars({
     defaultLayout: 'layout'
 }));
+app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -102,9 +104,7 @@ app.get('/employment', function(req, res) {
 
         query.on('end', function(result) {
             client.end();
-            res.json({
-                data: result.rows
-            });
+            res.json(result.rows);
         });
     });
 });
