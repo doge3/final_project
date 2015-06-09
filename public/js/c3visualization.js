@@ -40,7 +40,6 @@ $(function() {
                 }
             }
 
-            console.log(mapping);
             for (var area in mapping) {
                 var arr = [].concat(mapping[area]);
                 arr.unshift(area);
