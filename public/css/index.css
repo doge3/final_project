@@ -505,8 +505,8 @@ select#soflow-color {
     margin-top: 20px;
 }
 
-.about p{
-    width: 48%;
+.about .hello{
+    width: 50%;
     font-size: 19px;
     float: left;
 }
