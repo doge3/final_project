@@ -19,10 +19,10 @@ app.set('port', process.env.PORT || 3000);
 app.engine('handlebars', handlebars({
     defaultLayout: 'layout'
 }));
-app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(cookieParser());
 
 app.get('/', function(req, res) {

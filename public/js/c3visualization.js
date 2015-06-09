@@ -63,6 +63,12 @@ $(function() {
         });
 
         var barChart = c3.generate({
+            padding: {
+                bottom: 15,
+            },
+            size: {
+                height: 400
+            },
             bindto: bindto,
             data: {
                 columns: columns,
@@ -72,9 +78,19 @@ $(function() {
                 rotated: true,
                 x: {
                     type: 'category',
-                    categories: this.criteria[category].values
+                    categories: this.criteria[category].values,
+                    label: {
+                        text: 'Categories',
+                        position: 'outer-middle'
+                    }
+                },
+                y: {
+                    label: {
+                        text: '# of People',
+                        position: 'outer-center'
+                    }
                 }
-            }
+            },
         });
 
         return barChart;
@@ -98,6 +114,9 @@ $(function() {
             data: {
                 columns: pieData,
                 type: 'pie'
+            },
+            legend: {
+                position: 'right'
             }
         });
 
