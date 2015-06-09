@@ -187,13 +187,13 @@ $(function() {
             addPie(areas, category);
 
             $('#map_img').mapster({
-                fillColor: 'ff0000',
+                fillColor: '2579be',
                 fillOpacity: 0.3,
                 showToolTip: true,
                 mapKey: 'name',
                 listKey: 'name',
                 areas: mapKeytoTooltip(),
-                onClick: clickHandler
+                onClick: clickHandler,
             });
         }
 
